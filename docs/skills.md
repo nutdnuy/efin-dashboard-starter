@@ -36,9 +36,8 @@
 
 ## ที่มาและการตรวจ
 
-Revision: `49dd158d1076134a641b33efb035946536778336`  
-ไฟล์และ SHA-256: [skills.lock.json](../skills.lock.json)  
+Revision: `49dd158d1076134a641b33efb035946536778336`
+ไฟล์และ SHA-256: [skills.lock.json](../skills.lock.json)
 ใบอนุญาต: [MIT ของ Matt Pocock](../.agents/skills/LICENSE.mattpocock)
 
 ไฟล์สนับสนุนและ agents/openai.yaml ถูกคัดลอกทั้งชุด ไม่ใช่เฉพาะ SKILL.md ดู [THIRD_PARTY_NOTICES](../THIRD_PARTY_NOTICES.md) สำหรับรายละเอียดการแจกจ่าย
-

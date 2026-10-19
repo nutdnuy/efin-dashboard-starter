@@ -70,4 +70,3 @@ if errors:
     sys.exit(1)
 print(f"PASS: {len(primary)} user commands + {len(helpers)} helpers; {len(lock['files'])} pinned files; invocation policies; {len(markdown)} Markdown documents and local links.")
 print("Structural verification only: this does not prove an agent session or future dashboard works.")
-
