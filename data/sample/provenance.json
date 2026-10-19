@@ -1,0 +1,56 @@
+{
+  "synthetic": true,
+  "description": "Deterministic synthetic classroom prices, not actual market quotes or Efin data. DEMO_* symbols do not identify investable securities.",
+  "source": "Original formula-generated demonstration data for efin-dashboard-starter. No external market feed was used.",
+  "generatedOn": "2026-10-19",
+  "dateRange": {
+    "start": "2026-06-15",
+    "end": "2026-10-16"
+  },
+  "calendar": "90 weekdays; Thai market holidays are not modeled.",
+  "symbols": [
+    "DEMO_BANK",
+    "DEMO_ENERGY",
+    "DEMO_SET",
+    "DEMO_TECH"
+  ],
+  "observationsPerSymbol": 90,
+  "rowCount": 360,
+  "priceType": "Synthetic unadjusted close; no dividends, corporate actions or fees.",
+  "generation": {
+    "priceFormula": "round(base * exp(drift * i) * (1 + amplitude * sin(i / 7 + phase)), 2)",
+    "volumeFormula": "round(volumeBase * (1 + 0.18 * sin(i / 5 + phase)))",
+    "index": "i = 0 through 89 in chronological weekday order",
+    "parameters": {
+      "DEMO_BANK": {
+        "base": 100,
+        "drift": 0.0018,
+        "amplitude": 0.021,
+        "phase": 0.0,
+        "volumeBase": 200000
+      },
+      "DEMO_ENERGY": {
+        "base": 80,
+        "drift": -0.00035,
+        "amplitude": 0.035,
+        "phase": 1.2,
+        "volumeBase": 300000
+      },
+      "DEMO_SET": {
+        "base": 1000,
+        "drift": 0.00055,
+        "amplitude": 0.012,
+        "phase": 0.5,
+        "volumeBase": 1000000
+      },
+      "DEMO_TECH": {
+        "base": 120,
+        "drift": 0.0028,
+        "amplitude": 0.04,
+        "phase": 2.1,
+        "volumeBase": 150000
+      }
+    }
+  },
+  "sha256": "916f4e3a3c6b0ca0b07d8909aa4bd15f6c219bedf86b3b8142e6ea91afab228f"
+}

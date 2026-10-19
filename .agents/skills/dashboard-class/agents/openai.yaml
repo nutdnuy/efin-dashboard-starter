@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dashboard Class"
+  short_description: "Run the Efin dashboard classroom workflow"
+  default_prompt: "Use $dashboard-class to guide me through this project's first verified dashboard exercise."
+policy:
+  allow_implicit_invocation: false

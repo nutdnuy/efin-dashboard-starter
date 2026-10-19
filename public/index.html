@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Efin Dashboard Lab</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+    <header class="header">
+      <a class="brand" href="/" aria-label="Dashboard Lab home"
+        ><span class="mark">D</span> DASHBOARD <b>LAB</b></a
+      ><span class="course">THAI EQUITIES / AGENT WORKSHOP</span
+      ><button id="reload" class="button">โหลด snapshot ใหม่</button>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">BUILD · VERIFY · REPEAT</p>
+          <h1 id="title">หุ้นไทย · Dashboard Lab</h1>
+          <p class="lede">
+            เริ่มจากข้อมูลที่ตรวจสอบได้ แล้วสร้างมุมมองของคุณเอง
+          </p>
+        </div>
+        <span id="mode" class="badge">กำลังโหลด</span>
+      </div>
+      <section id="message" class="notice" role="status" aria-live="polite">
+        กำลังอ่านข้อมูล…
+      </section>
+      <div class="toolbar">
+        <label
+          >ช่วงเปรียบเทียบ
+          <select id="lookback">
+            <option value="5">5 คาบ</option>
+            <option value="21">21 คาบ</option>
+            <option value="63">63 คาบ</option>
+          </select></label
+        ><label class="upload"
+          >ทดลอง CSV ในเบราว์เซอร์
+          <input id="upload" type="file" accept=".csv,text/csv" /></label
+        ><button id="export" class="button" disabled>ดาวน์โหลดสรุป JSON</button>
+      </div>
+      <p id="preview-note" class="small"></p>
+      <section class="stats" aria-label="ข้อมูลชุดที่เลือก">
+        <article>
+          <p>ข้อมูล ณ วันที่</p>
+          <strong id="asof">—</strong
+          ><span id="age">ตรวจวันที่ของข้อมูลทุกครั้ง</span>
+        </article>
+        <article>
+          <p>Benchmark</p>
+          <strong id="benchmark">—</strong
+          ><span>เปรียบเทียบด้วยวันที่ตรงกัน</span>
+        </article>
+        <article>
+          <p>ข้อมูลที่คำนวณได้</p>
+          <strong id="coverage">—</strong><span id="source">—</span>
+        </article>
+      </section>
+      <section class="workspace">
+        <div class="chart-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">PERFORMANCE / BASE 100</p>
+              <h2 id="chart-title">ผลตอบแทนสะสมเทียบ Benchmark</h2>
+            </div>
+            <span id="selected" class="badge quiet">—</span>
+          </div>
+          <div class="legend">
+            <span><i class="asset"></i>หุ้นที่เลือก</span
+            ><span><i class="bench"></i>Benchmark</span>
+          </div>
+          <div
+            id="chart"
+            class="chart"
+            role="img"
+            aria-label="ยังไม่มีข้อมูลกราฟ"
+          ></div>
+          <p class="small">
+            ปรับฐานเริ่มต้นเป็น 100 · คาบ = วันที่มีข้อมูลตรงกัน ·
+            ไม่เติมราคาที่ขาด
+          </p>
+        </div>
+        <aside class="reading">
+          <p class="eyebrow">READ THE NUMBERS</p>
+          <h2>อ่านให้เป็น<br />ก่อนตัดสินใจ</h2>
+          <div class="reading-item">
+            <b>01 / ฐานเดียวกัน</b>
+            <p>เส้นที่สูงกว่า สะท้อนผลตอบแทนสะสมที่สูงกว่าในช่วงที่เลือก</p>
+          </div>
+          <div class="reading-item">
+            <b>02 / ส่วนต่าง</b>
+            <p>
+              Excess return คือผลตอบแทนหุ้นลบ Benchmark หน่วยเป็นจุดเปอร์เซ็นต์
+            </p>
+          </div>
+          <div class="reading-item">
+            <b>03 / ตรวจข้อมูล</b>
+            <p>ข้อมูลเก่าหรือหุ้นที่คำนวณไม่ได้ ต้องแสดงสถานะให้เห็นเสมอ</p>
+          </div>
+        </aside>
+      </section>
+      <section class="table-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">WATCHLIST</p>
+            <h2>เลือกหุ้นเพื่อเปรียบเทียบ</h2>
+          </div>
+          <label
+            >เรียงตาม
+            <select id="sort">
+              <option value="symbol">ชื่อหุ้น</option>
+              <option value="excess">Excess return</option>
+              <option value="return">ผลตอบแทน</option>
+            </select></label
+          >
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption class="sr-only">
+              ราคาและผลตอบแทนตามช่วงข้อมูลที่เลือก
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">หลักทรัพย์</th>
+                <th scope="col">ราคาปิด</th>
+                <th scope="col">ผลตอบแทน</th>
+                <th scope="col">Benchmark</th>
+                <th scope="col">Excess (pp)</th>
+                <th scope="col">ข้อมูล ณ</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <footer>
+        <p>
+          CLASSROOM STARTER · ราคาสาธิตเป็นข้อมูลจำลอง
+          ไม่ใช่ข้อมูลตลาดหรือคำแนะนำลงทุน
+        </p>
+        <p>
+          แก้ watchlist ที่ dashboard.config.json · วิธีเชื่อมข้อมูลจริงอยู่ใน
+          docs/data-contract.md
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
