@@ -1,0 +1,4 @@
+interface:
+  display_name: "เขียนพร้อมทดสอบ"
+  short_description: "สร้างฟังก์ชันพร้อมทดสอบพฤติกรรมที่ต้องการ"
+  default_prompt: "ใช้ $test-first พัฒนาฟังก์ชันนี้พร้อมการทดสอบ"

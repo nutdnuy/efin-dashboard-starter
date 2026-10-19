@@ -1,0 +1,4 @@
+interface:
+  display_name: "ตรวจโค้ด"
+  short_description: "ตรวจว่าการแก้โค้ดตรงโจทย์และไม่ทำงานเดิมเสีย"
+  default_prompt: "ใช้ $review-code ตรวจงานที่เพิ่งเปลี่ยนเทียบกับโจทย์"

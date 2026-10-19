@@ -1,0 +1,4 @@
+interface:
+  display_name: "เขียนคำสั่งให้ AI"
+  short_description: "เขียนคำสั่งให้ Agent เข้าใจและทำตามได้ชัดเจน"
+  default_prompt: "ใช้ $write-instructions ช่วยเขียนคำสั่งให้ชัดเจน"

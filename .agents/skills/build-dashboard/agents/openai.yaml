@@ -1,0 +1,6 @@
+interface:
+  display_name: "สร้างและปรับ Dashboard"
+  short_description: "สรุปงาน สร้าง ทดสอบ และปรับ Dashboard จนใช้ได้"
+  default_prompt: "ใช้ $build-dashboard สร้าง Dashboard จากแบบที่เลือกแล้วเปิดให้ลอง"
+policy:
+  allow_implicit_invocation: false

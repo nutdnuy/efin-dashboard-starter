@@ -1,6 +1,6 @@
 # Starter verification
 
-This checks the teaching kit, not a dashboard application or a completed learner session.
+This checks the teaching kit, not a learner's finished dashboard or satisfaction.
 
 Run from the repository root:
 
@@ -8,19 +8,49 @@ Run from the repository root:
 python3 scripts/check_starter.py
 ```
 
-The checker verifies the pinned file hashes, the 11 user-invoked commands and
-8 supporting skills, invocation policies, local Markdown links, and obvious
-personal-path/credential patterns in the class documents. It needs only the
-Python standard library. Students do not need to run this before starting a chat.
+The standard-library checker verifies manifest version 2, the exact 4 primary
+and 8 helper identities/folders, deployed hashes, source-origin metadata,
+frontmatter names, Thai UI metadata, invocation policies, local Markdown and
+skill paths, removed command references, and obvious private-path/secret
+patterns in authored documentation. Students do not need to run it before
+starting a chat. Origin metadata is not a fresh network comparison with upstream.
 
-For the 2026-10-19 revision, all 57 upstream files were also compared byte for byte
-against commit `49dd158d1076134a641b33efb035946536778336`. A separate read-only
-review checked dependency coverage and the conversation → preview → choice →
-explicit implementation → feedback path. It identified Git/ZIP, ignored tracker
-files in worktrees, and missing-subagent fallbacks; the project instructions now
-cover those cases.
+## 2026-10-19 consolidation checks
 
-This is structural verification and instruction review. Native skill discovery
-varies by agent application, and no complete real-student dashboard session is
-claimed. Verify the resulting application separately using its actual commands,
-UI and data, with the [acceptance checklist](acceptance-checklist.md).
+- All eight selected build/maintenance commands now share one build-dashboard
+  entry point; helper names, references and local tracker templates were reviewed.
+- The checker passed a valid temporary bundle and 14 mutation scenarios covering
+  invalid hashes, names, metadata, policies, provenance, links, extra folders and
+  privacy. Ordinary prose and example route paths remain accepted.
+- Skill-creator quick validation passed the 8 actual helper files. Its older
+  frontmatter allowlist rejects the retained disable-model-invocation field in
+  the 4 primary files. Their remaining frontmatter passed on temporary copies
+  with only that field omitted; the distributed originals keep the field and
+  both explicit-invocation policies are checked by the repository checker.
+- The portable instruction/skill bundle was compared byte for byte with its
+  canonical source. Original files were backed up before migration.
+
+## Bounded synthetic forward test
+
+An independent agent executed the merged skill in an isolated local HTML
+portfolio fixture with labeled synthetic holdings and a pre-existing user
+comment. This is a proxy evaluation, not a real student session.
+
+| Request | Observed result |
+|---|---|
+| Plan a stock-search field only | A local spec was written; application SHA-256 stayed unchanged. |
+| Implement that plan and show it | Added search and empty state; existing comment, holdings and total were preserved. |
+
+The browser check first failed for the absent search field, then failed for the
+missing empty state. The final 8 checks passed: case-insensitive match, no-match
+state, trimmed partial query, clearing the filter, portfolio total, synthetic
+label, user comment, and no overflow at 1280px/390px. Actual local-file desktop
+and mobile screenshots were inspected. The agent reported no phase-confirmation
+stops and performed separate Standards and Spec review passes.
+
+This test used headless Chromium, a saved pre-change file as its baseline and
+no remote publishing, scheduling or global configuration edits. It did not
+exercise Git/worktree coordination, a live provider, native skill discovery in
+every app, or real human design approval. Test those capabilities when the
+learner's chosen dashboard requires them, using its actual commands, UI and
+data and the [acceptance checklist](acceptance-checklist.md).

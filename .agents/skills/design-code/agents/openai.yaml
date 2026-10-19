@@ -1,0 +1,4 @@
+interface:
+  display_name: "จัดโครงสร้างโค้ด"
+  short_description: "ออกแบบโค้ดให้เข้าใจง่ายและแก้ไขต่อได้สะดวก"
+  default_prompt: "ใช้ $design-code ช่วยจัดโครงสร้างโค้ดให้แก้ต่อได้ง่าย"

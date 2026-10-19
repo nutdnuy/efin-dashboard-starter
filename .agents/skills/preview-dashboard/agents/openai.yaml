@@ -1,0 +1,4 @@
+interface:
+  display_name: "ลองทำต้นแบบ"
+  short_description: "ทำแบบทดลองให้เห็นหน้าตาหรือการทำงานก่อนเลือก"
+  default_prompt: "ใช้ $preview-dashboard ทำต้นแบบให้ฉันลองเลือก"

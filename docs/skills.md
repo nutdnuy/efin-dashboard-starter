@@ -1,43 +1,70 @@
-# Skills ที่รวมไว้สำหรับคลาส
+# Skills สำหรับคุยและสร้าง Dashboard
 
-ชุดนี้คัดลอก **11 คำสั่งหลักตามรายการที่เลือก** จาก [mattpocock/skills](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336) และเก็บไฟล์ต้นฉบับไว้เหมือนเดิม ภายใต้ MIT License
+เริ่มด้วย **คุยออกแบบ Dashboard** แล้วใช้ **สร้างและปรับ Dashboard** ทำงานต่อจนได้เวอร์ชันที่ลองใช้ได้ สกิลหลักมี 4 ตัว ชื่อที่แสดงเป็นภาษาไทย และชื่อคำสั่งเป็นภาษาอังกฤษสั้น ๆ
 
-เริ่มที่ grill-with-docs เพื่อคุยโจทย์ เมื่อเลือกทิศทางแล้วให้ผู้เรียนเรียก to-spec และ implement เพื่อสร้าง ส่วนคำสั่งอื่นเลือกใช้เมื่อจำเป็น ดูตาราง 11 คำสั่งใน [README](../README.md)
+| ชื่อที่แสดง | คำสั่ง | ใช้ทำอะไร |
+|---|---|---|
+| เลือกตัวช่วย | [choose-skill](../.agents/skills/choose-skill/SKILL.md) | ช่วยเลือกว่าจะเริ่มหรือไปต่ออย่างไร |
+| คุยออกแบบ Dashboard | [plan-dashboard](../.agents/skills/plan-dashboard/SKILL.md) | ถามโจทย์ทีละเรื่อง เสนอแบบ จดสิ่งที่เลือก |
+| สร้างและปรับ Dashboard | [build-dashboard](../.agents/skills/build-dashboard/SKILL.md) | สรุปโจทย์ วางแผน แบ่งงานเมื่อจำเป็น สร้าง ทดสอบ ตรวจ และปรับต่อ |
+| ตั้งค่าโปรเจกต์ | [setup-project](../.agents/skills/setup-project/SKILL.md) | ปรับที่เก็บงาน คำศัพท์ และกติกาโปรเจกต์เมื่อจำเป็น |
 
-## ตัวช่วยที่ต้องติดมาด้วย
+## เรียกครั้งเดียว แล้วทำต่อเนื่อง
 
-คัดลอกอีก **8 สกิลประกอบ** เพราะคำสั่งหลักเรียกใช้จริง การก็อบเฉพาะไฟล์ 11 คำสั่งจะทำให้บาง workflow ขาดส่วนทำงาน
+```text
+ใช้ build-dashboard สร้างจากแบบที่เลือก แล้วเปิดให้ลอง
+```
 
-| ตัวช่วย | ใช้ทำอะไร |
+งานใหญ่จะจัดการแผนและงานย่อยภายในสกิลเดียว งานเล็กข้ามส่วนที่ไม่จำเป็นได้ เมื่อมีแอปแล้วใช้คำสั่งเดิมเพื่อแก้บั๊กหรือปรับหน้าจอได้ ไม่ต้องสั่งสรุปสเปก แบ่งงาน และสร้างทีละคำสั่ง
+
+คุณยังจำกัดขอบเขตได้ เช่น **“ใช้ build-dashboard วางแผนเพิ่มส่วนปันผลก่อน ยังไม่แก้โค้ด”** หรือ **“ใช้ build-dashboard ตรวจว่าตารางแน่นตรงไหนและเสนอทางแก้”** สกิลต้องยึดขอบเขตนั้น
+
+## ตัวช่วยเบื้องหลัง
+
+Agent เลือกใช้ตามงาน ผู้เรียนไม่ต้องจำทั้งหมด
+
+| ชื่อที่แสดง | คำสั่ง | หน้าที่ |
+|---|---|---|
+| ถามให้ชัด | [ask-questions](../.agents/skills/ask-questions/SKILL.md) | ถามเฉพาะประเด็นที่ยังไม่ชัด |
+| ทำศัพท์ให้ตรงกัน | [define-terms](../.agents/skills/define-terms/SKILL.md) | เก็บคำศัพท์และความหมายร่วมกัน |
+| จัดโครงสร้างโค้ด | [design-code](../.agents/skills/design-code/SKILL.md) | ออกแบบส่วนของโค้ดให้อ่านและแก้ได้ |
+| เขียนพร้อมทดสอบ | [test-first](../.agents/skills/test-first/SKILL.md) | ทดสอบพฤติกรรมสำคัญระหว่างสร้าง |
+| ตรวจโค้ด | [review-code](../.agents/skills/review-code/SKILL.md) | ตรวจทั้งมาตรฐานและความตรงกับโจทย์ |
+| ลองทำต้นแบบ | [preview-dashboard](../.agents/skills/preview-dashboard/SKILL.md) | ทำแบบที่เปิดดูหรือคลิกลองได้ |
+| ค้นข้อมูล | [find-information](../.agents/skills/find-information/SKILL.md) | หาข้อเท็จจริงจากแหล่งอ้างอิง |
+| เขียนคำสั่งให้ AI | [write-instructions](../.agents/skills/write-instructions/SKILL.md) | ปรับคำสั่งในโปรเจกต์ให้ชัดเจน |
+
+## วิธีใช้ในแต่ละแอป
+
+- หากแอปรองรับเมนู Skills ให้เลือกชื่อข้างต้นตามวิธีของแอป
+- ถ้าไม่พบคำสั่ง ให้พิมพ์ **“อ่าน .agents/skills/plan-dashboard/SKILL.md แล้วใช้สกิลนี้ช่วยฉันออกแบบ Dashboard”** การอ่านไฟล์ไม่ใช่การติดตั้งสกิลส่วนกลาง
+- 4 สกิลหลักให้ผู้ใช้เรียกอย่างชัดเจน ส่วน 8 ตัวช่วยใช้ประกอบได้ตาม policy การเรียก `build-dashboard` ครอบคลุมขั้นตอนภายในของมันแล้ว
+- หากไม่มี subagents หรือ worktrees ให้ทำทีละส่วนและตรวจแยกมุมมองในแชตเดิม โดยบอกข้อจำกัดตามจริง
+- หากมี Matt Pocock Skills ส่วนกลางอยู่แล้ว ให้เลือกชุดของคลาสในโปรเจกต์นี้ ชุดนี้ไม่เปลี่ยนชื่อหรือแก้สกิลส่วนกลางของเครื่อง
+
+โปรเจกต์เตรียม `.scratch/` เป็นที่เก็บสเปก งานย่อย และคำถามที่ต้องตัดสินใจ พร้อมคำศัพท์ใน GLOSSARY.md แล้ว จึงไม่ต้องตั้งค่า tracker ก่อนเริ่มคุย ความต้องการแต่ละคนอยู่ใน BRIEF.md ไม่ต้องแก้ทุก SKILL.md
+
+## ชื่อเดิม → ชื่อใหม่
+
+ตารางนี้มีไว้เทียบกับต้นทาง ไม่ใช่รายการคำสั่งที่ต้องเรียกเพิ่ม
+
+| ชื่อเดิม | ชื่อในคลาส |
 |---|---|
-| [grilling](../.agents/skills/grilling/SKILL.md) | สัมภาษณ์เพื่อให้เข้าใจโจทย์ร่วมกัน |
-| [domain-modeling](../.agents/skills/domain-modeling/SKILL.md) | ทำให้ศัพท์และความหมายในโปรเจกต์ตรงกัน |
-| [codebase-design](../.agents/skills/codebase-design/SKILL.md) | ช่วยออกแบบส่วนของโค้ดเมื่อถึงขั้นพัฒนา |
-| [prototype](../.agents/skills/prototype/SKILL.md) | สร้างแบบทดลองเพื่อตอบคำถามเรื่องหน้าตาหรือพฤติกรรม |
-| [research](../.agents/skills/research/SKILL.md) | ค้นข้อมูลประกอบจากแหล่งอ้างอิง |
-| [tdd](../.agents/skills/tdd/SKILL.md) | พัฒนาพร้อมทดสอบพฤติกรรมสำคัญ |
-| [code-review](../.agents/skills/code-review/SKILL.md) | ตรวจการเปลี่ยนแปลงกับโจทย์และมาตรฐานโค้ด |
-| [writing-for-agents](../.agents/skills/writing-for-agents/SKILL.md) | เขียนคำสั่งที่ Agent อ่านได้ชัดเจน ใช้ใน retro |
+| ask-matt | choose-skill |
+| grill-with-docs | plan-dashboard |
+| to-spec, implement, to-tickets, implement-spec, wayfinder, triage, improve-codebase-architecture, retro | **build-dashboard** — รวมทั้ง 8 เป็นสกิลเดียว |
+| setup-matt-pocock-skills | setup-project |
+| grilling | ask-questions |
+| domain-modeling | define-terms |
+| codebase-design | design-code |
+| tdd | test-first |
+| code-review | review-code |
+| prototype | preview-dashboard |
+| research | find-information |
+| writing-for-agents | write-instructions |
 
-## เรียกใช้อย่างไร
+## ที่มา
 
-- ถ้าแอปค้นพบสกิลในโปรเจกต์ ให้เลือกชื่อสกิลตามวิธีของแอป
-- หากไม่มีเมนูหรือ slash command ให้พิมพ์ชัดเจน เช่น **“อ่าน .agents/skills/grill-with-docs/SKILL.md แล้วใช้สกิลนี้ช่วยฉันออกแบบ Dashboard”** การอ่านไฟล์เป็นทางใช้คำสั่งโดยตรง ไม่ใช่การยืนยันว่าแอปติดตั้งสกิลสำเร็จ
-- ถ้ามี Matt Pocock Skills ติดตั้งอยู่แล้ว สามารถเลือกใช้ชุดนั้นได้ โดยตรวจชื่อและเวอร์ชันจริง ชุดนี้ไม่ติดตั้งหรือแก้สกิล global ของเครื่อง
-- 11 คำสั่งหลักสงวนให้ผู้ใช้เรียก ตัวช่วย 8 ตัวใช้ได้ตาม policy ของแต่ละสกิล ไม่เปิดให้คำสั่งหลักเรียกกันเองโดยอัตโนมัติ
-- บางแอปไม่มี subagents หรือ worktrees ให้ใช้ implement แบบทีละส่วนแทน implement-spec
-- ask-matt ต้นฉบับกล่าวถึงสกิลนอกชุดนี้ด้วย Agent ต้องตรวจว่ามีจริงก่อนแนะนำให้ใช้ ไม่ถือว่าสกิลเหล่านั้นติดตั้งมาด้วย
+ดัดแปลงจาก [mattpocock/skills](https://github.com/mattpocock/skills/tree/49dd158d1076134a641b33efb035946536778336) ภายใต้ [MIT License](../.agents/skills/LICENSE.mattpocock) โดยเปลี่ยนชื่อ รวมขั้นตอน และเพิ่มทางทำงานเมื่อไม่มี subagent หรือ Git ไฟล์จึงไม่ใช่สำเนาต้นทางทั้งหมดแบบเดิม
 
-## การตั้งค่าที่เตรียมให้
-
-โปรเจกต์เตรียม local Markdown เป็นที่เก็บ spec และงานย่อยใน .scratch/ พร้อมคำศัพท์สถานะและตำแหน่ง glossary แล้ว จึงเริ่มคุยได้ทันที ไม่ต้องเชื่อม GitHub Issues ก่อน ใช้ setup-matt-pocock-skills เมื่อต้องการเปลี่ยนการตั้งค่านี้
-
-โจทย์การลงทุนเก็บใน BRIEF.md กติกาคลาสอยู่ใน AGENTS.md จึงปรับโปรเจกต์โดยไม่แก้ทุก SKILL.md
-
-## ที่มาและการตรวจ
-
-Revision: `49dd158d1076134a641b33efb035946536778336`
-ไฟล์และ SHA-256: [skills.lock.json](../skills.lock.json)
-ใบอนุญาต: [MIT ของ Matt Pocock](../.agents/skills/LICENSE.mattpocock)
-
-ไฟล์สนับสนุนและ agents/openai.yaml ถูกคัดลอกทั้งชุด ไม่ใช่เฉพาะ SKILL.md ดู [THIRD_PARTY_NOTICES](../THIRD_PARTY_NOTICES.md) สำหรับรายละเอียดการแจกจ่าย
+[skills.lock.json](../skills.lock.json) บันทึก hash ของไฟล์ที่แจกจริงและที่มาของต้นฉบับ ดู [เครดิต](../THIRD_PARTY_NOTICES.md) และ [วิธีตรวจ](verification.md)

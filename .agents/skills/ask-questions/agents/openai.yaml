@@ -1,0 +1,4 @@
+interface:
+  display_name: "ถามให้ชัด"
+  short_description: "ถามทีละประเด็นเพื่อให้เข้าใจสิ่งที่ต้องการ"
+  default_prompt: "ใช้ $ask-questions ช่วยถามให้โจทย์ของฉันชัดเจน"

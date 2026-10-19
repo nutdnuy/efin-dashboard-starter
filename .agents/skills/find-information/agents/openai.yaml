@@ -1,0 +1,4 @@
+interface:
+  display_name: "ค้นข้อมูล"
+  short_description: "หาข้อมูลจากแหล่งต้นทางพร้อมหลักฐานอ้างอิง"
+  default_prompt: "ใช้ $find-information ค้นข้อมูลที่ต้องใช้ตัดสินใจ"

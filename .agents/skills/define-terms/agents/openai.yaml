@@ -1,0 +1,4 @@
+interface:
+  display_name: "ทำศัพท์ให้ตรงกัน"
+  short_description: "อธิบายและบันทึกคำศัพท์ที่ใช้ร่วมกันในโปรเจกต์"
+  default_prompt: "ใช้ $define-terms ทำให้คำศัพท์ในโปรเจกต์ตรงกัน"

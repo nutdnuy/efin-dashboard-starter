@@ -1,34 +1,32 @@
-# Issue tracker: Local Markdown
+# Local project tracker
 
-Issues and specs for this repo live as markdown files in `.scratch/`.
+Use Markdown under `.scratch/`; no remote account is needed. Small changes need
+only a concise acceptance note, not a mandatory task graph.
 
-## Conventions
+## One effort, separate record types
 
-- One feature per directory: `.scratch/<feature-slug>/`
-- The spec is `.scratch/<feature-slug>/spec.md`
-- Implementation issues are one file per ticket at `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`, never a single combined tickets file
-- Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
-- Comments and conversation history append to the bottom of the file under a `## Comments` heading
+- `.scratch/<effort>/spec.md`: agreed behavior, design, data assumptions and checks.
+- `.scratch/<effort>/map.md`: outcome, accepted decisions, open choices, exclusions and next action.
+- `decisions/NN-<slug>.md`: one concrete question; `Owner:`, `Blocked by:` and `Status: open | in-progress | resolved | out-of-scope`. Record the answer and evidence. Resolve blockers before dependent questions; claim before work and release abandoned claims.
+- `tasks/NN-<slug>.md`: one complete user-visible slice; acceptance checks, `Blocked by:` and `Status: ready | in-progress | done | blocked`. Only work tasks whose blockers are done.
+- `backlog/NN-<slug>.md`: incoming request, current and desired behavior, comments and the configured triage role as `Status:`. See [triage-labels.md](triage-labels.md). Triage status is separate from task execution status.
 
-## When a skill says "publish to the issue tracker"
+Paths above are relative to `.scratch/<effort>/`. Number within each record type.
+Use relative record paths in `Blocked by:` to avoid ambiguous IDs. Decisions
+marked out-of-scope do not automatically unblock dependent work: revise its
+scope first. Keep prior comments and answers; append context instead of
+restarting an interview. A user rejection may be recorded under `.scratch/<effort>/.out-of-scope/`
+with the reason; already implemented behavior is not a rejection.
 
-Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
+## Coordination
 
-## When a skill says "fetch the relevant ticket"
+Read the referenced file to fetch a task. Update local files to record progress;
+“publish to the tracker” means local persistence unless a remote is explicitly
+configured and the action authorized. The coordinator owns shared statuses.
+Pass absolute paths to the main workspace's ignored tracker files to worktree
+agents; do not assume those files exist in another checkout. Work sequentially
+when isolation is unavailable.
 
-Read the file at the referenced path. The user will normally pass the path or the issue number directly.
-
-## Wayfinding operations
-
-Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.
-
-- **Map**: `.scratch/<effort>/map.md` (the Notes / Decisions-so-far / Fog body).
-- **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`grilling`/`task`); a `Status:` line records `claimed`/`resolved`.
-- **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every file it lists is `resolved`.
-- **Frontier**: scan `.scratch/<effort>/issues/` for files that are open, unblocked, and unclaimed; first by number wins.
-- **Claim**: set `Status: claimed` and save before any work.
-- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the map's Decisions-so-far in `map.md`.
-
-## Classroom boundary
-
-Local files are private drafts and ignored by Git. Do not publish student work to the instructor repository. A different tracker requires the learner's explicit choice and verified destination.
+These files are private drafts ignored by Git. Verify the learner's destination
+before any authorized remote action; never publish to the instructor template
+by default. Preserve existing tracker choices when running setup-project.

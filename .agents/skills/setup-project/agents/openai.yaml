@@ -1,0 +1,6 @@
+interface:
+  display_name: "ตั้งค่าโปรเจกต์"
+  short_description: "จัดที่เก็บงานและเอกสารให้พร้อมใช้กับ Agent"
+  default_prompt: "ใช้ $setup-project ตั้งค่าโปรเจกต์ให้พร้อมใช้งาน"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "เลือกตัวช่วย"
+  short_description: "ช่วยเลือกสกิลที่เหมาะกับสิ่งที่อยากทำต่อ"
+  default_prompt: "ใช้ $choose-skill ช่วยเลือกขั้นตอนที่เหมาะกับโจทย์ของฉัน"
+policy:
+  allow_implicit_invocation: false

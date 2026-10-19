@@ -1,0 +1,6 @@
+interface:
+  display_name: "คุยออกแบบ Dashboard"
+  short_description: "คุยให้โจทย์ชัดและเลือกหน้าตา Dashboard ที่ชอบ"
+  default_prompt: "ใช้ $plan-dashboard ช่วยคุยออกแบบ Dashboard การลงทุนของฉัน"
+policy:
+  allow_implicit_invocation: false
