@@ -1,3 +1,3 @@
-# Project entry
+# Project instructions
 
-Read and follow [AGENTS.md](AGENTS.md). It is the single project contract. Do not duplicate its rules here.
+Read AGENTS.md, then START.md and BRIEF.md. Use the project skill files selected by the human; preserve their invocation policies.

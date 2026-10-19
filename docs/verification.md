@@ -1,17 +1,26 @@
-# Verification record
+# Starter verification
 
-Verified on 2026-10-19.
+This checks the teaching kit, not a dashboard application or a completed learner session.
 
-- Node.js 22.22.3: 28 automated tests passed.
-- `npm run check`: JavaScript syntax, local Markdown links, config, sample pipeline and known token/personal-path patterns passed.
-- `npm run doctor`: required files and Node version passed. Optional installed skills were detected without reading credentials.
-- Actual Chromium browser: initial 3-asset demo, symbol selection, 5/21-period switching, return sorting, rejected CSV retaining previous results, stale-data state, API-error state, disabled export on error.
-- Desktop 1440px and mobile 390px inspected; no horizontal document overflow or browser page errors.
-- Import tests cover unchanged-input idempotence, invalid data preserving prior snapshot and corrupt snapshots failing explicitly.
-- Formula example: 100 → 110 versus 200 → 210 gives 10% versus 5%, excess 5 percentage points.
-- Human-readable documentation was independently reviewed against executable behavior; sample lookback and preview order were corrected.
+Run from the repository root:
 
-Scope: synthetic data and the local CSV pipeline. Live Efin authentication/data access, a production API adapter, cloud deployment, exchange holidays, and scheduled jobs have not been implemented or verified.
+```bash
+python3 scripts/check_starter.py
+```
 
-The repository's CI independently reruns tests/checks on Node 22 and 24 after pushes. See its actual run status for remote results.
+The checker verifies the pinned file hashes, the 11 user-invoked commands and
+8 supporting skills, invocation policies, local Markdown links, and obvious
+personal-path/credential patterns in the class documents. It needs only the
+Python standard library. Students do not need to run this before starting a chat.
 
+For the 2026-10-19 revision, all 57 upstream files were also compared byte for byte
+against commit `49dd158d1076134a641b33efb035946536778336`. A separate read-only
+review checked dependency coverage and the conversation → preview → choice →
+explicit implementation → feedback path. It identified Git/ZIP, ignored tracker
+files in worktrees, and missing-subagent fallbacks; the project instructions now
+cover those cases.
+
+This is structural verification and instruction review. Native skill discovery
+varies by agent application, and no complete real-student dashboard session is
+claimed. Verify the resulting application separately using its actual commands,
+UI and data, with the [acceptance checklist](acceptance-checklist.md).

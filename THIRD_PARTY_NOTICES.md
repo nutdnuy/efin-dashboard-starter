@@ -1,7 +1,26 @@
-# Attribution
+# Third-party notices
 
-This is original code and documentation, inspired by the project-first onboarding and source/derived-output separation in [Migchw/llm-wiki-starter](https://github.com/Migchw/llm-wiki-starter). No source files or skills are copied from that repository; it had no explicit license when reviewed on 2026-10-19.
+## Matt Pocock Skills
 
-Optional engineering workflows use separately installed [mattpocock/skills](https://github.com/mattpocock/skills), MIT licensed by its authors. No upstream skills are redistributed or modified here. Reviewed upstream revision: `49dd158d1076134a641b33efb035946536778336`. See [integration guide](docs/upstream-skills.md).
+This repository redistributes selected, unmodified files from
+[mattpocock/skills](https://github.com/mattpocock/skills) at commit
+`49dd158d1076134a641b33efb035946536778336`.
 
-Efin and SET are referenced to explain the class context. This repository is an independent teaching starter, not an official SDK or endorsed product. No Efin/SET data, credentials, logos, or proprietary assets are included. All bundled prices use deliberately fictitious DEMO_* symbols.
+Copyright (c) 2026 Matt Pocock. Licensed under the MIT License. The complete
+copyright and permission notice is included in
+[.agents/skills/LICENSE.mattpocock](.agents/skills/LICENSE.mattpocock).
+
+The bundle contains 11 selected user-invoked skills and 8 supporting dependencies.
+Each selected directory is copied in full. [skills.lock.json](skills.lock.json)
+records each original path and SHA-256 for verification. Class-specific instructions
+live outside those upstream files.
+
+The local tracker and triage configuration in docs/agents/ is adapted from the
+upstream setup templates under the same MIT license.
+
+## Class materials
+
+The original class documentation is covered by [LICENSE](LICENSE).
+The project name identifies the class context; this is an independent teaching
+starter, not an official Efin product or data SDK. No market data, API credentials
+or rights to any provider's data are included.

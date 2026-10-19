@@ -1,7 +1,10 @@
 # Domain documents
 
-This is a single-context repository.
-Read GLOSSARY.md before using domain terms. Read only relevant docs/adr/*.md decisions for the current change.
-Older upstream skills may request CONTEXT.md; that file points to GLOSSARY.md. Keep one glossary.
-Add new terms when they remove a recurring ambiguity; do not rename established calculations to imply an official proprietary RRG implementation.
-Keep implementation decisions with their rationale and validation in docs/adr/. Do not copy personal machine configuration into this public repository.
+Use one GLOSSARY.md at the project root and docs/adr/ for consequential decisions.
+Read only terms and decisions relevant to the current conversation. If a file is
+absent, proceed and create it when a term or decision is actually agreed.
+
+The learner defines the dashboard's purpose. Resolve ambiguous terms through
+concrete examples: portfolio versus watchlist, price return versus total return,
+latest observation versus live price. Record accepted meanings, not a prescribed
+strategy or metric set. Preserve existing decisions unless the learner revisits them.

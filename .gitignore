@@ -1,13 +1,23 @@
-node_modules/
+# Private learner inputs and conversation drafts
 .env
 .env.*
 !.env.example
 data/private/*
 !data/private/.gitkeep
-outputs/*
-!outputs/.gitkeep
 .scratch/*
 !.scratch/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Common files from the application the learner may later build
+node_modules/
+.next/
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+*.pyc
 .DS_Store
 *.log
 playwright-report/

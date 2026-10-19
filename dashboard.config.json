@@ -1,7 +1,0 @@
-{
-  "title": "หุ้นไทย · Efin Dashboard Lab",
-  "benchmark": "DEMO_SET",
-  "symbols": ["DEMO_BANK", "DEMO_ENERGY", "DEMO_TECH"],
-  "lookbackPeriods": 21,
-  "staleAfterDays": 7
-}

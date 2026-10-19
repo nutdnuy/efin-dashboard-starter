@@ -1,20 +1,30 @@
-# Dashboard brief
+# Dashboard ที่เรากำลังออกแบบ
 
-## Learner goal
-Create a Thai-language stock dashboard, verify its numbers, then adapt it to an authorized Efin export. Begin with the synthetic demo.
+Agent จดและปรับไฟล์นี้จากบทสนทนา ผู้เรียนตอบด้วยภาษาปกติได้ ไม่ต้องกรอกทุกช่องก่อนเริ่ม
 
-## Current scope
-- 3 synthetic assets compared with DEMO_SET.
-- Select a symbol and lookback, sort returns, inspect dates and warnings.
-- Parse and validate CSV; preview in browser or persist a local snapshot with CLI.
-- Rebased performance, price return and excess return only.
+## สิ่งที่อยากตัดสินใจได้ง่ายขึ้น
+ยังไม่ได้ตกลง
 
-## Next exercise
-Choose one: change the watchlist, add a verified metric, improve one view, or prepare a refresh workflow.
-Use [the blank brief](templates/dashboard-brief.md) to state your chosen problem, input, expected output and acceptance criteria.
+## ใครใช้ และเปิดดูเมื่อไร
+ยังไม่ได้ตกลง
 
-## Out of scope until requested
-Live Efin API adapter, proprietary RRG, automatic schedules, cloud deployment and trading.
+## สิ่งที่อยากเห็นเป็นอันดับแรก
+ยังไม่ได้ตกลง
 
-## Done
-The requested behavior works; tests and checks pass; the browser was inspected; data source and limitations are visible.
+## สินทรัพย์และข้อมูล
+ยังไม่ได้ตกลง — ระบุแหล่งข้อมูล วันที่ หน่วย และสิทธิ์เข้าถึงเมื่อเลือกแล้ว
+
+## หน้าตาที่เลือก
+ยังไม่ได้เลือก — บันทึกแบบที่เลือกและเหตุผลหลังได้ดูตัวอย่าง
+
+## เวอร์ชันแรก
+ยังไม่ได้ตกลง — เลือกงานเล็กที่ใช้งานได้ครบ และระบุว่าจะลองอะไรเพื่อยืนยันว่าทำงานจริง
+
+## Feedback และสิ่งที่ต้องปรับต่อ
+ยังไม่มี
+
+## สิ่งที่ตกลงแล้ว / คำถามที่ยังเปิด
+ยังไม่ได้เริ่มบทสนทนา
+
+## เปิดใช้งานอย่างไร
+Agent เพิ่มลิงก์หรือคำสั่งจริงหลังสร้างและทดสอบแล้ว และเขียนรายละเอียดใน APP.md
