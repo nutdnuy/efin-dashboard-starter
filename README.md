@@ -8,6 +8,16 @@
 
 ![Dashboard ตัวอย่าง ใช้ข้อมูลจำลองทั้งหมด](docs/assets/dashboard-preview.png)
 
+## Flow ของคลาส
+
+**Start → Context → Validate → Build → Refresh → Explore** แบ่งหน้าที่ของผู้เรียน, Agent, Skills และส่วนจัดการข้อมูล เพื่อเห็นว่าต้องส่งอะไรให้ใครและตรวจผลตรงไหน
+
+![Flow 6 ขั้น แยกบทบาทผู้เรียน Agent Skills และข้อมูล](docs/assets/workflow.png)
+
+[เปิด Flow ใน Drawdy](https://drawdy.io/?canvas=6ad6183c2f137995e483f079&token=Rq_d1IExXEJ50zIHSN0tnw) · [อ่านคำอธิบายภาษาไทยและคำสั่งแต่ละขั้น](docs/workflow.md)
+
+ใช้บริบทในโปรเจกต์ร่วมกับ Skills เดิมได้ ไม่ต้องแก้ทุกสกิล แผนภาพเป็นลำดับการเรียนและส่งต่องาน; เปิดข้อมูลจำลองด้วย `npm start` ได้ทันที ส่วน Refresh ใช้เมื่อต้องการนำเข้า CSV รอบใหม่ ยังไม่มีการดึง Efin หรืองานตั้งเวลาที่เปิดใช้มาให้
+
 ## เปิดครั้งแรก
 
 ต้องมี **Node.js 22 ขึ้นไป** และ npm ที่มากับ Node.js โปรเจกต์ใช้ความสามารถในตัว Node.js จึงไม่ต้องรัน `npm install` และไม่ต้องมี API key เพื่อเปิดตัวอย่าง
